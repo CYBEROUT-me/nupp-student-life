@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Campus Life — NUPP Poltava Polytechnic</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700;9..144,800;9..144,900&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="assets/nupp-logo.webp" />
+  <style>
+    /* page-specific */
+    .crumb {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 12px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--ink-soft);
+    }
+
+    .crumb a {
+      color: var(--navy);
+      text-decoration: none;
+    }
+
+    .page-hero {
+      padding: 70px 0 60px;
+    }
+
+    .day-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 16px;
+      margin-top: 40px;
+    }
+
+    @media (min-width: 880px) {
+      .day-grid {
+        grid-template-columns: 100px 1fr 1fr;
+      }
+    }
+
+    .day-time {
+      font-family: 'Fraunces', Georgia, serif;
+      font-weight: 800;
+      font-size: 36px;
+      color: var(--navy);
+      line-height: 1;
+    }
+
+    .day-time .ampm {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 12px;
+      letter-spacing: 0.18em;
+      display: block;
+      margin-top: 6px;
+      color: var(--ink-soft);
+    }
+
+    .day-block {
+      display: contents;
+    }
+
+    .day-card {
+      background: var(--paper);
+      border: 1.5px solid color-mix(in oklab, var(--navy) 12%, transparent);
+      border-radius: 22px;
+      padding: 28px;
+    }
+
+    .day-card.is-yellow {
+      background: var(--yellow);
+    }
+
+    .day-card.is-navy {
+      background: var(--navy);
+      color: var(--cream);
+    }
+
+    .day-card h4 {
+      font-family: 'Fraunces', Georgia, serif;
+      font-size: 24px;
+      font-weight: 700;
+      margin: 0 0 8px;
+    }
+
+    .day-card p {
+      color: inherit;
+      opacity: 0.85;
+    }
+
+    .feature-split {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 40px;
+      align-items: center;
+    }
+
+    @media (min-width: 880px) {
+      .feature-split {
+        grid-template-columns: 1fr 1fr;
+        gap: 80px;
+      }
+    }
+
+    .feature-illust {
+      aspect-ratio: 4/3;
+      background: var(--navy);
+      border-radius: var(--radius-card);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--yellow);
+      padding: 40px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .feature-illust.is-yellow {
+      background: var(--yellow);
+      color: var(--navy);
+    }
+
+    .feature-illust.is-cream {
+      background: var(--paper);
+      color: var(--navy);
+      border: 1.5px solid color-mix(in oklab, var(--navy) 12%, transparent);
+    }
+
+    .feature-illust svg {
+      width: 80%;
+      height: 80%;
+    }
+
+    .price-row {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 16px;
+    }
+
+    @media (min-width: 760px) {
+      .price-row {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    .price-card {
+      background: var(--paper);
+      border: 1.5px solid color-mix(in oklab, var(--navy) 12%, transparent);
+      border-radius: var(--radius-card);
+      padding: 32px;
+    }
+
+    .price-card.is-yellow {
+      background: var(--yellow);
+    }
+
+    .price-card .price {
+      font-family: 'Fraunces', Georgia, serif;
+      font-weight: 800;
+      font-size: 56px;
+      color: var(--navy);
+      line-height: 1;
+    }
+
+    .price-card .price small {
+      font-size: 16px;
+      font-family: 'JetBrains Mono', monospace;
+      color: var(--ink-soft);
+      margin-left: 6px;
+    }
+
+    .price-card h4 {
+      font-family: 'Fraunces', Georgia, serif;
+      font-size: 26px;
+      font-weight: 700;
+      margin: 16px 0 12px;
+      color: var(--navy);
+    }
+
+    .price-card ul {
+      list-style: none;
+      padding: 0;
+      margin: 16px 0 0;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      font-size: 16px;
+      color: var(--ink-soft);
+    }
+
+    .price-card li::before {
+      content: "→ ";
+      color: var(--navy);
+      font-weight: 700;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="grid-bg" id="gridBg"></div>
+
+  <div class="page">
+
+    <!-- ============ NAV (same as index) ============ -->
+    <header class="nav" data-screen-label="Nav">
+      <div class="container nav-inner">
+        <a class="nav-logo" href="index.html">
+          <img src="assets/nupp-logo.webp" alt="NUPP coat of arms" />
+          <div>
+            <div class="wordmark">NUPP</div>
+            <div class="sub">Poltava · Est. 1818</div>
+          </div>
+        </a>
+        <nav>
+          <ul class="nav-links">
+            <li class="nav-item-hide-mobile"><a class="btn-flip btn-nav" href="index.html#spots"><span
+                  class="flip-inner"><span class="flip-front">Campus</span><span
+                    class="flip-back">Campus</span></span></a></li>
+            <li class="nav-item-hide-mobile"><a class="btn-flip btn-nav" href="index.html#clubs"><span
+                  class="flip-inner"><span class="flip-front">Clubs</span><span
+                    class="flip-back">Clubs</span></span></a></li>
+            <li class="nav-item-hide-mobile"><a class="btn-flip btn-nav" href="index.html#events"><span
+                  class="flip-inner"><span class="flip-front">Events</span><span
+                    class="flip-back">Events</span></span></a></li>
+            <li class="nav-item-hide-mobile"><a class="btn-flip btn-nav" href="campus-life.html"><span
+                  class="flip-inner"><span class="flip-front">Campus Life</span><span class="flip-back">Campus
+                    Life</span></span></a></li>
+            <li><a class="btn-flip is-yellow is-small" href="index.html#apply"><span class="flip-inner"><span
+                    class="flip-front">Apply Now</span><span class="flip-back">Apply Now ↗</span></span></a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- ============ PAGE HERO ============ -->
+    <section class="page-hero" data-screen-label="01 Page Hero">
+      <div class="container">
+        <div class="crumb"><a href="index.html">Home</a> · Campus Life</div>
+        <div style="display:grid; grid-template-columns: 1fr; gap: 32px; align-items: end; margin-top: 28px;">
+          <h1 class="display-xl" style="color: var(--navy);">A day in<br /><span class="yellow">the life</span> at <span
+              class="stroke">NUPP.</span></h1>
+          <p class="lead" style="max-width: 720px;">An hour-by-hour walk through campus — what students eat, where they
+            study, what's loud, what's quiet, and where the kettle lives. The honest version.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ MARQUEE ============ -->
+    <section class="marquee" aria-hidden="true">
+      <div class="marquee-track">
+        <span>07:30 alarm <span class="dot"></span></span>
+        <span>08:30 first lecture <span class="dot"></span></span>
+        <span>13:00 cafeteria rush <span class="dot"></span></span>
+        <span>18:00 club hour <span class="dot"></span></span>
+        <span>23:00 dorm tea council <span class="dot"></span></span>
+        <span>07:30 alarm <span class="dot"></span></span>
+        <span>08:30 first lecture <span class="dot"></span></span>
+        <span>13:00 cafeteria rush <span class="dot"></span></span>
+        <span>18:00 club hour <span class="dot"></span></span>
+        <span>23:00 dorm tea council <span class="dot"></span></span>
+      </div>
+    </section>
+
+    <!-- ============ A DAY IN THE LIFE ============ -->
+    <section class="section-pad" data-screen-label="02 Day in life">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <span class="eyebrow">§ 01 — A typical Tuesday</span>
+            <h2 class="display-l" style="margin-top: 18px; color: var(--navy);">From kettle<br />to curfew.</h2>
+          </div>
+          <p>Every faculty has its own rhythm, but Tuesdays look more or less like this for a second-year IT student
+            living in Dorm 4.</p>
+        </div>
+
+        <div class="day-grid">
+          <div class="day-time">07<span class="ampm">am · alarm</span></div>
+          <div class="day-card">
+            <h4>Kettle on, slippers on.</h4>
+            <p>Block 04 wakes up slowly. Coffee from the corner kiosk costs 35 UAH and the man behind it remembers your
+              order by week three.</p>
+          </div>
+          <div class="day-card is-yellow">
+            <h4>The 12-minute walk.</h4>
+            <p>Cut through the park, past the bronze plaque, up the front steps of the Main Building. There are exactly
+              23 steps — yes, students have counted.</p>
+          </div>
+
+          <div class="day-time">08<span class="ampm">am · lecture</span></div>
+          <div class="day-card is-navy">
+            <h4>Algorithms, Aud. 312.</h4>
+            <p>Old wood desks, blackboard, professor draws diagrams faster than you can copy. Front row reserved for the
+              keen kids; back row for the recovering.</p>
+          </div>
+          <div class="day-card">
+            <h4>10-minute break, hallway buzz.</h4>
+            <p>The corridor outside Aud. 312 is the unofficial gossip exchange. Important things heard here: club
+              elections, exam leaks (rumours), engagement rumours (also rumours).</p>
+          </div>
+
+          <div class="day-time">13<span class="ampm">pm · lunch</span></div>
+          <div class="day-card is-yellow">
+            <h4>Cafeteria, Block 02.</h4>
+            <p>The borscht queue is fastest at 13:05 sharp, before the architects finish their studio. Galushky on
+              Wednesdays. Compote always.</p>
+          </div>
+          <div class="day-card">
+            <h4>Coffee on the steps.</h4>
+            <p>If the sun's out, students park themselves on the front-stairs balustrade. Twenty minutes of nothing.
+              Sacred.</p>
+          </div>
+
+          <div class="day-time">15<span class="ampm">pm · lab</span></div>
+          <div class="day-card">
+            <h4>Computer lab, Block 03.</h4>
+            <p>Linux machines, three monitors each, instant noodles smell faintly in the air. Group project time. Four
+              people, two opinions, one merge conflict.</p>
+          </div>
+          <div class="day-card is-navy">
+            <h4>Library, third floor, by the window.</h4>
+            <p>The good seats. Phone face-down, headphones in, two hours of finally getting things done. Old radiator
+              clicks comfortingly.</p>
+          </div>
+
+          <div class="day-time">18<span class="ampm">pm · clubs</span></div>
+          <div class="day-card is-yellow">
+            <h4>Robotics lab — Tuesday meet.</h4>
+            <p>Soldering, solving, occasionally setting off a smoke alarm. A pizza usually appears around 19:30, no one
+              knows who orders it.</p>
+          </div>
+          <div class="day-card">
+            <h4>Choir rehearsal, hall 2.</h4>
+            <p>Polifoniya warms up with scales, ends with someone playing a song on the piano while everyone sings.
+              Acoustics: criminally good.</p>
+          </div>
+
+          <div class="day-time">23<span class="ampm">pm · dorm</span></div>
+          <div class="day-card is-navy">
+            <h4>Tea council in the kitchen.</h4>
+            <p>Six people, four mugs, one slightly suspicious cake from someone's mum. Topics: politics, philosophy, why
+              the radiator on third floor whistles.</p>
+          </div>
+          <div class="day-card">
+            <h4>One last hour at the desk.</h4>
+            <p>Lights out by 01:00 if you're sensible, 03:00 if it's exam week, and you tell yourself you'll sleep on
+              the weekend.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ MAIN BUILDING FEATURE ============ -->
+    <section class="section-pad" id="main-building" style="padding-top: 40px;" data-screen-label="03 Main Building">
+      <div class="container">
+        <div class="feature-split">
+          <div>
+            <span class="eyebrow">§ 02 — Block 01</span>
+            <h2 class="display-m" style="margin-top: 18px; color: var(--navy);">The Main Building has its own gravity.
+            </h2>
+            <p style="margin-top: 22px;">Built in the 1930s on Pershotravneva Avenue, the eight-floor flagship is where
+              every NUPP student takes at least one class — usually a lot more. Marble stairs, original chandeliers in
+              the rector's hall, and an attic rumoured to house a piano no one has played since 1987.</p>
+            <div style="display: flex; gap: 32px; margin-top: 32px; flex-wrap: wrap;">
+              <div>
+                <div class="display-s" style="color: var(--navy);">8</div>
+                <div class="eyebrow" style="margin-top: 8px;">Floors</div>
+              </div>
+              <div>
+                <div class="display-s" style="color: var(--navy);">320</div>
+                <div class="eyebrow" style="margin-top: 8px;">Rooms</div>
+              </div>
+              <div>
+                <div class="display-s" style="color: var(--navy);">1933</div>
+                <div class="eyebrow" style="margin-top: 8px;">Built</div>
+              </div>
+            </div>
+          </div>
+          <div class="feature-illust" style="padding:0;">
+            <img src="https://nupp.edu.ua/uploads/files/0/01-.jpg" alt="NUPP Main Building"
+              style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;border-radius:var(--radius-card);">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ DORMS FEATURE ============ -->
+    <section class="section-pad" id="dorms" style="padding-top: 40px;" data-screen-label="04 Dorms">
+      <div class="container">
+        <div class="feature-split">
+          <div class="feature-illust is-yellow" style="order:2;padding:0;">
+            <img src="https://nupp.edu.ua/uploads/files/0/03-.jpg" alt="NUPP Dormitories"
+              style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;border-radius:var(--radius-card);">
+          </div>
+          <div>
+            <span class="eyebrow">§ 03 — Гуртожитки</span>
+            <h2 class="display-m" style="margin-top: 18px; color: var(--navy);">Six dorms.<br />One shared kettle.</h2>
+            <p style="margin-top: 22px;">Buildings 1 through 6, all within ten minutes of the Main Building. Each has
+              its personality — Block 03 is the noisy one, Block 05 has the legendary kitchen, Block 06 is where the
+              international students live and learn three languages by accident.</p>
+
+            <div class="price-row" style="margin-top: 32px; grid-template-columns: 1fr 1fr;">
+              <div class="price-card">
+                <div class="price">2-3<small>/room</small></div>
+                <h4>Standard room</h4>
+                <ul>
+                  <li>Bed, desk, wardrobe, lamp</li>
+                  <li>Shared kitchen per floor</li>
+                  <li>Shower &amp; bathroom per floor</li>
+                </ul>
+              </div>
+              <div class="price-card is-yellow">
+                <div class="price">600<small>/month UAH</small></div>
+                <h4>Average rent</h4>
+                <ul>
+                  <li>Includes utilities</li>
+                  <li>Wi-Fi everywhere</li>
+                  <li>24h security &amp; access</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ COSTS ============ -->
+    <section class="section-pad" style="padding-top: 40px;" data-screen-label="05 Cost of life">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <span class="eyebrow">§ 04 — Cost of student life</span>
+            <h2 class="display-l" style="margin-top: 18px; color: var(--navy);">A month in<br />Poltava money.</h2>
+          </div>
+          <p>What a typical NUPP student actually spends in a month, sourced from a survey of 240 second-years across 6
+            faculties. (1 EUR ≈ 44 UAH.)</p>
+        </div>
+
+        <div class="price-row">
+          <div class="price-card">
+            <div class="price">600<small>UAH</small></div>
+            <h4>Dorm rent</h4>
+            <ul>
+              <li>2-3 person room</li>
+              <li>Utilities included</li>
+              <li>Wi-Fi included</li>
+            </ul>
+          </div>
+          <div class="price-card is-yellow">
+            <div class="price">2,400<small>UAH</small></div>
+            <h4>Food &amp; cafeteria</h4>
+            <ul>
+              <li>~80 UAH lunch on campus</li>
+              <li>Coffee corner: 35 UAH</li>
+              <li>Saturday market splurge</li>
+            </ul>
+          </div>
+          <div class="price-card">
+            <div class="price">1,800<small>UAH</small></div>
+            <h4>Everything else</h4>
+            <ul>
+              <li>Transport, gym, books</li>
+              <li>Cinema, kvartirniki</li>
+              <li>The occasional borscht emergency</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CTA ============ -->
+    <section class="section-pad" style="padding-top: 40px;" data-screen-label="06 CTA">
+      <div class="container">
+        <div class="cta-strip">
+          <div class="cta-deco" aria-hidden="true"></div>
+          <div>
+            <span class="eyebrow" style="display:block; margin-bottom: 18px;">Ready to enrol?</span>
+            <h2 class="display-l">Come see for yourself.</h2>
+            <p style="margin-top: 22px; max-width: 640px; color: var(--ink);">Open Days happen the first Saturday of
+              every month from March to June. Free guided tour, free coffee, and a chance to actually walk the marble
+              stairs.</p>
+          </div>
+          <div style="display: flex; flex-direction: column; gap: 14px;">
+            <a class="btn-flip is-large" href="index.html#apply"><span class="flip-inner"><span class="flip-front">Apply
+                  now ↗</span><span class="flip-back">Apply now ↗</span></span></a>
+            <a class="btn-flip is-ghost is-large" href="index.html"><span class="flip-inner"><span
+                  class="flip-front">Back to home</span><span class="flip-back">Back to home ↩</span></span></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ FOOTER ============ -->
+    <footer data-screen-label="07 Footer">
+      <div class="container">
+        <div class="foot-grid">
+          <div>
+            <div class="foot-brand">
+              <img src="assets/nupp-logo.webp" alt="" />
+              <div class="wordmark">NUPP</div>
+            </div>
+            <p class="foot-blurb">National University «Yuri Kondratyuk Poltava Polytechnic» — engineering, architecture,
+              IT, and 200+ years of curious students. Poltava, Ukraine.</p>
+          </div>
+          <div>
+            <h4>Explore</h4>
+            <ul>
+              <li><a href="index.html#spots">Campus spots</a></li>
+              <li><a href="index.html#clubs">Clubs &amp; societies</a></li>
+              <li><a href="index.html#events">Events</a></li>
+              <li><a href="campus-life.html">Campus life</a></li>
+              <li><a href="index.html#faq">Newcomers' FAQ</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4>Apply</h4>
+            <ul>
+              <li><a href="#">Bachelor's programmes</a></li>
+              <li><a href="#">Master's programmes</a></li>
+              <li><a href="#">International students</a></li>
+              <li><a href="#">Scholarships</a></li>
+              <li><a href="#">Dorm placement</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4>Visit</h4>
+            <ul>
+              <li>Pershotravneva Ave., 24</li>
+              <li>Poltava, 36011</li>
+              <li>Ukraine</li>
+              <li><a href="mailto:hello@nupp.edu.ua">hello@nupp.edu.ua</a></li>
+              <li><a href="tel:+380532563806">+380 (532) 56-38-06</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="foot-mark" aria-hidden="true">NUPP · 1818 — 2026</div>
+        <div class="foot-meta">
+          <span>© 2026 NUPP Student Life</span>
+          <span>Poltava Polytechnic · 200+ years curious</span>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    (function () {
+      if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+      const host = document.getElementById('gridBg');
+      if (!host) return;
+      const canvas = document.createElement('canvas');
+      host.appendChild(canvas);
+      const ctx = canvas.getContext('2d');
+      const opacities = [0.18, 0.14, 0.11, 0.08, 0.05, 0.03];
+      let cols, rows, sq, blocks, lastIdx = null, ptr = 0, trail = [];
+      function setup() {
+        const w = canvas.width = host.clientWidth;
+        const h = canvas.height = host.clientHeight;
+        cols = window.innerWidth < 768 ? 12 : 32;
+        sq = w / cols;
+        rows = Math.ceil(h / sq);
+        blocks = []; trail = []; lastIdx = null; ptr = 0;
+        for (let y = 0; y < rows; y++) for (let x = 0; x < cols; x++) blocks.push({ x: x * sq, y: y * sq, color: '#004080', alpha: 0, target: 0 });
+      }
+      function draw() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        for (const b of blocks) {
+          b.alpha += (b.target - b.alpha) * 0.12;
+          if (b.alpha > 0.001) { ctx.fillStyle = b.color; ctx.globalAlpha = b.alpha; ctx.fillRect(b.x, b.y, sq, sq); }
+        }
+        ctx.globalAlpha = 1;
+        requestAnimationFrame(draw);
+      }
+      function fadeOut(b) { setTimeout(() => { b.target = 0; }, 500); }
+      if (!('ontouchstart' in window) && navigator.maxTouchPoints <= 1) {
+        document.addEventListener('mousemove', e => {
+          const r = canvas.getBoundingClientRect();
+          const mx = e.clientX, my = e.clientY;
+          if (mx < r.left || mx > r.right || my < r.top || my > r.bottom) return;
+          const xi = Math.floor((mx - r.left) / sq);
+          const yi = Math.floor((my - r.top) / sq);
+          const i = yi * cols + xi;
+          if (i !== lastIdx && blocks[i]) {
+            const b = blocks[i];
+            b.color = `rgba(0,64,128,${opacities[ptr]})`;
+            b.target = 1;
+            ptr = (ptr + 1) % opacities.length;
+            fadeOut(b);
+            trail.push(b);
+            if (trail.length > opacities.length) { const old = trail.shift(); old.target = 0; }
+            lastIdx = i;
+          }
+        });
+      }
+      window.addEventListener('resize', () => { clearTimeout(window.__gt); window.__gt = setTimeout(setup, 200); });
+      setup(); draw();
+    })();
+  </script>
+
+</body>
+
+</html>
