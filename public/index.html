@@ -34,16 +34,16 @@
         <nav>
           <ul class="nav-links">
             <li class="nav-item-hide-mobile"><a class="btn-flip btn-nav" href="#spots"><span class="flip-inner"><span
-                    class="flip-front">Campus</span><span class="flip-back">Campus</span></span></a></li>
+                    class="flip-front" data-i18n="nav.campus">Campus</span><span class="flip-back" data-i18n="nav.campus">Campus</span></span></a></li>
             <li class="nav-item-hide-mobile"><a class="btn-flip btn-nav" href="#clubs"><span class="flip-inner"><span
-                    class="flip-front">Clubs</span><span class="flip-back">Clubs</span></span></a></li>
+                    class="flip-front" data-i18n="nav.clubs">Clubs</span><span class="flip-back" data-i18n="nav.clubs">Clubs</span></span></a></li>
             <li class="nav-item-hide-mobile"><a class="btn-flip btn-nav" href="#events"><span class="flip-inner"><span
-                    class="flip-front">Events</span><span class="flip-back">Events</span></span></a></li>
+                    class="flip-front" data-i18n="nav.events">Events</span><span class="flip-back" data-i18n="nav.events">Events</span></span></a></li>
             <li class="nav-item-hide-mobile"><a class="btn-flip btn-nav" href="campus-life.html"><span
-                  class="flip-inner"><span class="flip-front">Campus Life</span><span class="flip-back">Campus
-                    Life</span></span></a></li>
+                  class="flip-inner"><span class="flip-front" data-i18n="nav.campuslife">Campus Life</span><span class="flip-back" data-i18n="nav.campuslife">Campus Life</span></span></a></li>
             <li><a class="btn-flip is-yellow is-small" href="#apply"><span class="flip-inner"><span
-                    class="flip-front">Apply Now</span><span class="flip-back">Apply Now ↗</span></span></a></li>
+                    class="flip-front" data-i18n="nav.apply">Apply Now</span><span class="flip-back" data-i18n="nav.apply.back">Apply Now ↗</span></span></a></li>
+            <li><button id="lang-btn" style="font-family:'JetBrains Mono',monospace;font-size:12px;font-weight:600;letter-spacing:0.1em;padding:6px 14px;border-radius:99px;border:1.5px solid var(--navy);background:transparent;color:var(--navy);cursor:pointer;">UA</button></li>
           </ul>
         </nav>
       </div>
@@ -54,7 +54,7 @@
       <div class="container">
         <div class="hero-eyebrow-row">
           <span class="dot"></span>
-          <span class="eyebrow">Live from Poltava, Ukraine · Since 1818</span>
+          <span class="eyebrow" data-i18n="idx.hero.eyebrow">Live from Poltava, Ukraine · Since 1818</span>
           <div class="swatch-row" aria-hidden="true">
             <span class="swatch s-navy"></span>
             <span class="swatch s-yellow"></span>
@@ -64,7 +64,7 @@
 
         <div style="display:grid; grid-template-columns: 1fr; gap: 40px; align-items: end; margin-top: 32px;">
           <div style="display:grid; grid-template-columns: 1fr auto; gap: 40px; align-items: end;">
-            <h1 class="display-xl">
+            <h1 class="display-xl" data-i18n-html="idx.hero.h1">
               Student<br />
               <span class="yellow">life</span> at <span class="stroke">NUPP.</span>
             </h1>
@@ -75,7 +75,7 @@
                     <path id="arc" d="M 30,160 a 130,130 0 1,1 260,0 a 130,130 0 1,1 -260,0" />
                   </defs>
                   <text>
-                    <textPath href="#arc">National University · Yuri Kondratyuk Poltava Polytechnic · 1818 · </textPath>
+                    <textPath href="#arc" data-i18n="idx.hero.seal">National University · Yuri Kondratyuk Poltava Polytechnic · 1818 · </textPath>
                   </text>
                 </svg>
               </div>
@@ -87,17 +87,15 @@
         </div>
 
         <div class="hero-sub">
-          <p class="lead">Poltava's most curious campus — 200+ years of tradition, a few thousand brilliantly weird
+          <p class="lead" data-i18n="idx.hero.lead">Poltava's most curious campus — 200+ years of tradition, a few thousand brilliantly weird
             students, and a coat of arms that already tells you everything: wheat, oak, the building, and a lot of
             ambition.</p>
           <div class="hero-cta-row">
             <a class="btn-flip is-large" href="#spots">
-              <span class="flip-inner"><span class="flip-front">Take the tour</span><span class="flip-back">Take the
-                  tour ↗</span></span>
+              <span class="flip-inner"><span class="flip-front" data-i18n="idx.hero.cta1">Take the tour</span><span class="flip-back" data-i18n="idx.hero.cta1b">Take the tour ↗</span></span>
             </a>
             <a class="btn-flip is-ghost is-large" href="#apply">
-              <span class="flip-inner"><span class="flip-front">Apply</span><span class="flip-back">Apply
-                  ↗</span></span>
+              <span class="flip-inner"><span class="flip-front" data-i18n="idx.hero.cta2">Apply</span><span class="flip-back" data-i18n="idx.hero.cta2b">Apply ↗</span></span>
             </a>
           </div>
         </div>
@@ -107,16 +105,16 @@
     <!-- ============ MARQUEE ============ -->
     <section class="marquee" aria-hidden="true">
       <div class="marquee-track">
-        <span>Poltava Polytechnic <span class="dot"></span></span>
-        <span>Since 1818 <span class="dot"></span></span>
-        <span>11,000+ students <span class="dot"></span></span>
-        <span>9 faculties <span class="dot"></span></span>
-        <span>Galushky &amp; gigabytes <span class="dot"></span></span>
-        <span>Poltava Polytechnic <span class="dot"></span></span>
-        <span>Since 1818 <span class="dot"></span></span>
-        <span>11,000+ students <span class="dot"></span></span>
-        <span>9 faculties <span class="dot"></span></span>
-        <span>Galushky &amp; gigabytes <span class="dot"></span></span>
+        <span><span data-i18n="idx.mq1.a">Poltava Polytechnic</span> <span class="dot"></span></span>
+        <span><span data-i18n="idx.mq1.b">Since 1818</span> <span class="dot"></span></span>
+        <span><span data-i18n="idx.mq1.c">11,000+ students</span> <span class="dot"></span></span>
+        <span><span data-i18n="idx.mq1.d">9 faculties</span> <span class="dot"></span></span>
+        <span><span data-i18n="idx.mq1.e">Galushky &amp; gigabytes</span> <span class="dot"></span></span>
+        <span><span data-i18n="idx.mq1.a">Poltava Polytechnic</span> <span class="dot"></span></span>
+        <span><span data-i18n="idx.mq1.b">Since 1818</span> <span class="dot"></span></span>
+        <span><span data-i18n="idx.mq1.c">11,000+ students</span> <span class="dot"></span></span>
+        <span><span data-i18n="idx.mq1.d">9 faculties</span> <span class="dot"></span></span>
+        <span><span data-i18n="idx.mq1.e">Galushky &amp; gigabytes</span> <span class="dot"></span></span>
       </div>
     </section>
 
@@ -125,11 +123,11 @@
       <div class="container">
         <div class="section-head">
           <div>
-            <span class="eyebrow">§ 01 — Campus Spots</span>
-            <h2 class="display-l" style="margin-top: 18px;">The places<br />students <em
+            <span class="eyebrow" data-i18n="idx.spots.eyebrow">§ 01 — Campus Spots</span>
+            <h2 class="display-l" style="margin-top: 18px;" data-i18n-html="idx.spots.h2">The places<br />students <em
                 style="font-style: italic;">actually</em> hang out.</h2>
           </div>
-          <p>Eight stories tall, two centuries old, and somehow always smelling like fresh coffee from the cafeteria —
+          <p data-i18n="idx.spots.p">Eight stories tall, two centuries old, and somehow always smelling like fresh coffee from the cafeteria —
             here's what makes our campus tick. Six spots every NUPP student knows by heart.</p>
         </div>
 
@@ -144,9 +142,9 @@
                 style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;border-radius:18px;">
             </div>
             <div>
-              <div class="spot-tag">Block 01 · Pershotravneva Ave</div>
-              <h3>The Main Building</h3>
-              <p>The 1930s temple of engineering — eight floors, marble stairs, and the loudest hallway echo in Poltava.
+              <div class="spot-tag" data-i18n="idx.spot1.tag">Block 01 · Pershotravneva Ave</div>
+              <h3 data-i18n="idx.spot1.h3">The Main Building</h3>
+              <p data-i18n="idx.spot1.p">The 1930s temple of engineering — eight floors, marble stairs, and the loudest hallway echo in Poltava.
                 Selfies on the front steps are mandatory.</p>
             </div>
           </a>
@@ -161,9 +159,9 @@
                 style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;border-radius:18px;">
             </div>
             <div>
-              <div class="spot-tag">The Dorms · 6 buildings</div>
-              <h3>The Dorms</h3>
-              <p>Six buildings, one shared kettle. Where 4 a.m. exam crams meet 4 p.m. hallway dance battles. Bring
+              <div class="spot-tag" data-i18n="idx.spot2.tag">The Dorms · 6 buildings</div>
+              <h3 data-i18n="idx.spot2.h3">The Dorms</h3>
+              <p data-i18n="idx.spot2.p">Six buildings, one shared kettle. Where 4 a.m. exam crams meet 4 p.m. hallway dance battles. Bring
                 slippers — it's a rule.</p>
             </div>
           </a>
@@ -179,9 +177,9 @@
                 style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;border-radius:18px;">
             </div>
             <div>
-              <div class="spot-tag">Library</div>
-              <h3>Scientific Library</h3>
-              <p>1.2M volumes. The good study spot is by the window on the third floor — don't tell anyone.</p>
+              <div class="spot-tag" data-i18n="idx.spot3.tag">Library</div>
+              <h3 data-i18n="idx.spot3.h3">Scientific Library</h3>
+              <p data-i18n="idx.spot3.p">1.2M volumes. The good study spot is by the window on the third floor — don't tell anyone.</p>
             </div>
           </a>
 
@@ -196,9 +194,9 @@
                 style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;border-radius:18px;">
             </div>
             <div>
-              <div class="spot-tag">Sport Complex</div>
-              <h3>The Stadium</h3>
-              <p>Football, athletics, the annual Faculty Cup. Also: best place to watch the sunset over Poltava.</p>
+              <div class="spot-tag" data-i18n="idx.spot4.tag">Sport Complex</div>
+              <h3 data-i18n="idx.spot4.h3">The Stadium</h3>
+              <p data-i18n="idx.spot4.p">Football, athletics, the annual Faculty Cup. Also: best place to watch the sunset over Poltava.</p>
             </div>
           </a>
 
@@ -212,9 +210,9 @@
                 style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;border-radius:18px;">
             </div>
             <div>
-              <div class="spot-tag">Park</div>
-              <h3>The Student Park</h3>
-              <p>Old chestnuts, painted benches, a fountain that works two months a year. Date spot, nap spot, debate
+              <div class="spot-tag" data-i18n="idx.spot5.tag">Park</div>
+              <h3 data-i18n="idx.spot5.h3">The Student Park</h3>
+              <p data-i18n="idx.spot5.p">Old chestnuts, painted benches, a fountain that works two months a year. Date spot, nap spot, debate
                 spot.</p>
             </div>
           </a>
@@ -229,19 +227,19 @@
         <div class="numbers">
           <div>
             <div class="num">1818</div>
-            <div class="lbl"><strong>Founded</strong> — older than the typewriter</div>
+            <div class="lbl" data-i18n-html="idx.num1"><strong>Founded</strong> — older than the typewriter</div>
           </div>
           <div>
             <div class="num">11k+</div>
-            <div class="lbl"><strong>Students</strong> on campus right now</div>
+            <div class="lbl" data-i18n-html="idx.num2"><strong>Students</strong> on campus right now</div>
           </div>
           <div>
             <div class="num">9</div>
-            <div class="lbl"><strong>Faculties</strong> from architecture to AI</div>
+            <div class="lbl" data-i18n-html="idx.num3"><strong>Faculties</strong> from architecture to AI</div>
           </div>
           <div>
             <div class="num">60+</div>
-            <div class="lbl"><strong>Clubs</strong> from chess to chemistry-rock</div>
+            <div class="lbl" data-i18n-html="idx.num4"><strong>Clubs</strong> from chess to chemistry-rock</div>
           </div>
         </div>
       </div>
@@ -252,10 +250,10 @@
       <div class="container">
         <div class="section-head">
           <div>
-            <span class="eyebrow">§ 02 — Clubs &amp; Societies</span>
-            <h2 class="display-l" style="margin-top: 18px;">Find your<br />weird people.</h2>
+            <span class="eyebrow" data-i18n="idx.clubs.eyebrow">§ 02 — Clubs &amp; Societies</span>
+            <h2 class="display-l" style="margin-top: 18px;" data-i18n-html="idx.clubs.h2">Find your<br />weird people.</h2>
           </div>
-          <p>From rocket-building to traditional embroidery — there's roughly one club for every twelve square meters of
+          <p data-i18n="idx.clubs.p">From rocket-building to traditional embroidery — there's roughly one club for every twelve square meters of
             campus. Some you join. Some find you.</p>
         </div>
 
@@ -263,59 +261,59 @@
           <div class="club-chip"><span class="club-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
                 stroke-width="2.5">
                 <path d="M4 19V5l8 4 8-4v14" />
-              </svg></span>Debate Club</div>
+              </svg></span><span data-i18n="idx.club.debate">Debate Club</span></div>
           <div class="club-chip"><span class="club-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
                 stroke-width="2.5">
                 <circle cx="12" cy="12" r="9" />
                 <path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18" />
-              </svg></span>Robotics Lab</div>
+              </svg></span><span data-i18n="idx.club.robotics">Robotics Lab</span></div>
           <div class="club-chip"><span class="club-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
                 stroke-width="2.5">
                 <path d="M9 18V5l12-2v13" />
                 <circle cx="6" cy="18" r="3" />
                 <circle cx="18" cy="16" r="3" />
-              </svg></span>Choir «Polifoniya»</div>
+              </svg></span><span data-i18n="idx.club.choir">Choir «Polifoniya»</span></div>
           <div class="club-chip"><span class="club-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
                 stroke-width="2.5">
                 <rect x="4" y="4" width="16" height="16" />
                 <path d="M4 12h16M12 4v16" />
-              </svg></span>Chess Society</div>
+              </svg></span><span data-i18n="idx.club.chess">Chess Society</span></div>
           <div class="club-chip"><span class="club-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
                 stroke-width="2.5">
                 <path d="M12 2v20M2 12h20" />
-              </svg></span>Volunteer Corps</div>
+              </svg></span><span data-i18n="idx.club.vol">Volunteer Corps</span></div>
           <div class="club-chip"><span class="club-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
                 stroke-width="2.5">
                 <circle cx="12" cy="12" r="9" />
                 <path d="M8 12l3 3 5-6" />
-              </svg></span>IT &amp; Hackathons</div>
+              </svg></span><span data-i18n="idx.club.it">IT &amp; Hackathons</span></div>
           <div class="club-chip"><span class="club-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
                 stroke-width="2.5">
                 <path d="M5 21V8l7-4 7 4v13" />
                 <path d="M9 21v-6h6v6" />
-              </svg></span>Architecture Workshop</div>
+              </svg></span><span data-i18n="idx.club.arch">Architecture Workshop</span></div>
           <div class="club-chip"><span class="club-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
                 stroke-width="2.5">
                 <path d="M12 3l3 6 7 1-5 5 1 7-6-3-6 3 1-7-5-5 7-1z" />
-              </svg></span>Vyshyvanka Circle</div>
+              </svg></span><span data-i18n="idx.club.vysh">Vyshyvanka Circle</span></div>
           <div class="club-chip"><span class="club-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
                 stroke-width="2.5">
                 <path d="M3 12l4-8 5 16 4-12 5 8" />
-              </svg></span>Eco Movement</div>
+              </svg></span><span data-i18n="idx.club.eco">Eco Movement</span></div>
           <div class="club-chip"><span class="club-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
                 stroke-width="2.5">
                 <circle cx="9" cy="13" r="6" />
                 <circle cx="17" cy="11" r="4" />
-              </svg></span>Photography Lab</div>
+              </svg></span><span data-i18n="idx.club.photo">Photography Lab</span></div>
           <div class="club-chip"><span class="club-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
                 stroke-width="2.5">
                 <path d="M2 12h20M12 2v20" />
                 <circle cx="12" cy="12" r="9" />
-              </svg></span>Esports Team</div>
+              </svg></span><span data-i18n="idx.club.esports">Esports Team</span></div>
           <div class="club-chip"><span class="club-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
                 stroke-width="2.5">
                 <path d="M4 19l8-14 8 14H4z" />
-              </svg></span>Theatre «Studio-T»</div>
+              </svg></span><span data-i18n="idx.club.theatre">Theatre «Studio-T»</span></div>
         </div>
       </div>
     </section>
@@ -325,63 +323,63 @@
       <div class="container">
         <div class="section-head">
           <div>
-            <span class="eyebrow">§ 03 — Traditions &amp; Events</span>
-            <h2 class="display-l" style="margin-top: 18px;">A year of<br />well-organised chaos.</h2>
+            <span class="eyebrow" data-i18n="idx.events.eyebrow">§ 03 — Traditions &amp; Events</span>
+            <h2 class="display-l" style="margin-top: 18px;" data-i18n-html="idx.events.h2">A year of<br />well-organised chaos.</h2>
           </div>
-          <p>Every year cycles through the same beloved madness — Day of Knowledge in September, Vyshyvanka in May, the
+          <p data-i18n="idx.events.p">Every year cycles through the same beloved madness — Day of Knowledge in September, Vyshyvanka in May, the
             engineering ball in spring. Mark your calendar.</p>
         </div>
 
         <div class="events-list">
           <a class="event-row" href="#">
-            <div class="ev-date"><span class="d">01</span><span class="m">Sep</span></div>
-            <div class="ev-title">Day of Knowledge — opening ceremony at the Main Building</div>
-            <div class="ev-where">Main Steps · 09:00</div>
+            <div class="ev-date"><span class="d">01</span><span class="m" data-i18n="idx.ev1.m">Sep</span></div>
+            <div class="ev-title" data-i18n="idx.ev1.title">Day of Knowledge — opening ceremony at the Main Building</div>
+            <div class="ev-where" data-i18n="idx.ev1.where">Main Steps · 09:00</div>
             <div class="ev-arrow"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor"
                 stroke-width="2.5">
                 <path d="M5 12h14M13 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" />
               </svg></div>
           </a>
           <a class="event-row" href="#">
-            <div class="ev-date"><span class="d">17</span><span class="m">Oct</span></div>
-            <div class="ev-title">Freshmen's Initiation — face-paint, songs, faculty oath</div>
-            <div class="ev-where">Student Park · 18:00</div>
+            <div class="ev-date"><span class="d">17</span><span class="m" data-i18n="idx.ev2.m">Oct</span></div>
+            <div class="ev-title" data-i18n="idx.ev2.title">Freshmen's Initiation — face-paint, songs, faculty oath</div>
+            <div class="ev-where" data-i18n="idx.ev2.where">Student Park · 18:00</div>
             <div class="ev-arrow"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor"
                 stroke-width="2.5">
                 <path d="M5 12h14M13 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" />
               </svg></div>
           </a>
           <a class="event-row" href="#">
-            <div class="ev-date"><span class="d">14</span><span class="m">Dec</span></div>
-            <div class="ev-title">Winter Hackathon — 36 hours, free pizza, real prizes</div>
-            <div class="ev-where">IT Faculty Lab · all weekend</div>
+            <div class="ev-date"><span class="d">14</span><span class="m" data-i18n="idx.ev3.m">Dec</span></div>
+            <div class="ev-title" data-i18n="idx.ev3.title">Winter Hackathon — 36 hours, free pizza, real prizes</div>
+            <div class="ev-where" data-i18n="idx.ev3.where">IT Faculty Lab · all weekend</div>
             <div class="ev-arrow"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor"
                 stroke-width="2.5">
                 <path d="M5 12h14M13 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" />
               </svg></div>
           </a>
           <a class="event-row" href="#">
-            <div class="ev-date"><span class="d">21</span><span class="m">Mar</span></div>
-            <div class="ev-title">Shevchenko Days — poetry night, kobzar performance, candle walk</div>
-            <div class="ev-where">Library Hall · 19:00</div>
+            <div class="ev-date"><span class="d">21</span><span class="m" data-i18n="idx.ev4.m">Mar</span></div>
+            <div class="ev-title" data-i18n="idx.ev4.title">Shevchenko Days — poetry night, kobzar performance, candle walk</div>
+            <div class="ev-where" data-i18n="idx.ev4.where">Library Hall · 19:00</div>
             <div class="ev-arrow"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor"
                 stroke-width="2.5">
                 <path d="M5 12h14M13 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" />
               </svg></div>
           </a>
           <a class="event-row" href="#">
-            <div class="ev-date"><span class="d">16</span><span class="m">May</span></div>
-            <div class="ev-title">Vyshyvanka Day — wear your embroidery, march down Pershotravneva</div>
-            <div class="ev-where">All campus · 11:00</div>
+            <div class="ev-date"><span class="d">16</span><span class="m" data-i18n="idx.ev5.m">May</span></div>
+            <div class="ev-title" data-i18n="idx.ev5.title">Vyshyvanka Day — wear your embroidery, march down Pershotravneva</div>
+            <div class="ev-where" data-i18n="idx.ev5.where">All campus · 11:00</div>
             <div class="ev-arrow"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor"
                 stroke-width="2.5">
                 <path d="M5 12h14M13 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" />
               </svg></div>
           </a>
           <a class="event-row" href="#">
-            <div class="ev-date"><span class="d">28</span><span class="m">Jun</span></div>
-            <div class="ev-title">Graduation Ball — caps in the air, boats on the Vorskla</div>
-            <div class="ev-where">River Embankment · 20:00</div>
+            <div class="ev-date"><span class="d">28</span><span class="m" data-i18n="idx.ev6.m">Jun</span></div>
+            <div class="ev-title" data-i18n="idx.ev6.title">Graduation Ball — caps in the air, boats on the Vorskla</div>
+            <div class="ev-where" data-i18n="idx.ev6.where">River Embankment · 20:00</div>
             <div class="ev-arrow"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor"
                 stroke-width="2.5">
                 <path d="M5 12h14M13 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" />
@@ -394,14 +392,14 @@
     <!-- ============ MARQUEE 2 ============ -->
     <section class="marquee is-yellow" aria-hidden="true">
       <div class="marquee-track">
-        <span>Galushky o'clock <span class="dot"></span></span>
-        <span>Vyshyvanka Friday <span class="dot"></span></span>
-        <span>11k brilliant minds <span class="dot"></span></span>
-        <span>One ridiculous coat of arms <span class="dot"></span></span>
-        <span>Galushky o'clock <span class="dot"></span></span>
-        <span>Vyshyvanka Friday <span class="dot"></span></span>
-        <span>11k brilliant minds <span class="dot"></span></span>
-        <span>One ridiculous coat of arms <span class="dot"></span></span>
+        <span><span data-i18n="idx.mq2.a">Galushky o'clock</span> <span class="dot"></span></span>
+        <span><span data-i18n="idx.mq2.b">Vyshyvanka Friday</span> <span class="dot"></span></span>
+        <span><span data-i18n="idx.mq2.c">11k brilliant minds</span> <span class="dot"></span></span>
+        <span><span data-i18n="idx.mq2.d">One ridiculous coat of arms</span> <span class="dot"></span></span>
+        <span><span data-i18n="idx.mq2.a">Galushky o'clock</span> <span class="dot"></span></span>
+        <span><span data-i18n="idx.mq2.b">Vyshyvanka Friday</span> <span class="dot"></span></span>
+        <span><span data-i18n="idx.mq2.c">11k brilliant minds</span> <span class="dot"></span></span>
+        <span><span data-i18n="idx.mq2.d">One ridiculous coat of arms</span> <span class="dot"></span></span>
       </div>
     </section>
 
@@ -410,87 +408,87 @@
       <div class="container">
         <div class="section-head">
           <div>
-            <span class="eyebrow">§ 04 — Word on Campus</span>
-            <h2 class="display-l" style="margin-top: 18px;">What students<br />actually say.</h2>
+            <span class="eyebrow" data-i18n="idx.testi.eyebrow">§ 04 — Word on Campus</span>
+            <h2 class="display-l" style="margin-top: 18px;" data-i18n-html="idx.testi.h2">What students<br />actually say.</h2>
           </div>
-          <p>Asked across faculties and dorms. Edited only for typos and occasional 4 a.m. enthusiasm.</p>
+          <p data-i18n="idx.testi.p">Asked across faculties and dorms. Edited only for typos and occasional 4 a.m. enthusiasm.</p>
         </div>
 
         <div class="testi-grid">
           <div class="testi-card">
             <div class="quote-mark">"</div>
-            <p class="quote">I came for civil engineering, stayed for the choir. Two years in and I still can't tell
+            <p class="quote" data-i18n="idx.t1.q">I came for civil engineering, stayed for the choir. Two years in and I still can't tell
               which one taught me more about teamwork.</p>
             <div class="testi-meta">
               <div class="avatar">O</div>
               <div>
-                <div class="testi-name">Oleksandra K.</div>
-                <div class="testi-role">3rd year · Architecture</div>
+                <div class="testi-name" data-i18n="idx.t1.name">Oleksandra K.</div>
+                <div class="testi-role" data-i18n="idx.t1.role">3rd year · Architecture</div>
               </div>
             </div>
           </div>
 
           <div class="testi-card is-yellow">
             <div class="quote-mark">"</div>
-            <p class="quote">The library at 11 p.m. is the cosiest place in Poltava. Old wood, green lamps, and the
+            <p class="quote" data-i18n="idx.t2.q">The library at 11 p.m. is the cosiest place in Poltava. Old wood, green lamps, and the
               gentle sound of someone crying about their thermo exam.</p>
             <div class="testi-meta">
               <div class="avatar">D</div>
               <div>
-                <div class="testi-name">Danylo M.</div>
-                <div class="testi-role">2nd year · Mechanical Eng.</div>
+                <div class="testi-name" data-i18n="idx.t2.name">Danylo M.</div>
+                <div class="testi-role" data-i18n="idx.t2.role">2nd year · Mechanical Eng.</div>
               </div>
             </div>
           </div>
 
           <div class="testi-card is-navy">
             <div class="quote-mark">"</div>
-            <p class="quote">My freshman year I built a robot that brings coffee from the cafeteria to Block 03. It was
+            <p class="quote" data-i18n="idx.t3.q">My freshman year I built a robot that brings coffee from the cafeteria to Block 03. It was
               a class project. It's now a campus celebrity.</p>
             <div class="testi-meta">
               <div class="avatar">M</div>
               <div>
-                <div class="testi-name">Maryna S.</div>
-                <div class="testi-role">4th year · Robotics &amp; AI</div>
+                <div class="testi-name" data-i18n="idx.t3.name">Maryna S.</div>
+                <div class="testi-role" data-i18n="idx.t3.role">4th year · Robotics &amp; AI</div>
               </div>
             </div>
           </div>
 
           <div class="testi-card is-yellow">
             <div class="quote-mark">"</div>
-            <p class="quote">Came from a tiny village outside Kremenchuk. Was terrified. Three months later I was
+            <p class="quote" data-i18n="idx.t4.q">Came from a tiny village outside Kremenchuk. Was terrified. Three months later I was
               leading a vyshyvanka workshop for international students.</p>
             <div class="testi-meta">
               <div class="avatar">N</div>
               <div>
-                <div class="testi-name">Nazar P.</div>
-                <div class="testi-role">1st year · Economics</div>
+                <div class="testi-name" data-i18n="idx.t4.name">Nazar P.</div>
+                <div class="testi-role" data-i18n="idx.t4.role">1st year · Economics</div>
               </div>
             </div>
           </div>
 
           <div class="testi-card">
             <div class="quote-mark">"</div>
-            <p class="quote">Faculty Cup final, 2025. Last minute. Header. Goal. The entire stadium did the
+            <p class="quote" data-i18n="idx.t5.q">Faculty Cup final, 2025. Last minute. Header. Goal. The entire stadium did the
               choreographed roar we'd practiced in a dorm hallway. Worth every grade I almost dropped.</p>
             <div class="testi-meta">
               <div class="avatar">V</div>
               <div>
-                <div class="testi-name">Volodya T.</div>
-                <div class="testi-role">3rd year · Civil Engineering</div>
+                <div class="testi-name" data-i18n="idx.t5.name">Volodya T.</div>
+                <div class="testi-role" data-i18n="idx.t5.role">3rd year · Civil Engineering</div>
               </div>
             </div>
           </div>
 
           <div class="testi-card is-navy">
             <div class="quote-mark">"</div>
-            <p class="quote">Professors know your name by week three. That's terrifying for the first two weeks and
+            <p class="quote" data-i18n="idx.t6.q">Professors know your name by week three. That's terrifying for the first two weeks and
               lovely forever after.</p>
             <div class="testi-meta">
               <div class="avatar">S</div>
               <div>
-                <div class="testi-name">Sofia H.</div>
-                <div class="testi-role">2nd year · Information Tech.</div>
+                <div class="testi-name" data-i18n="idx.t6.name">Sofia H.</div>
+                <div class="testi-role" data-i18n="idx.t6.role">2nd year · Information Tech.</div>
               </div>
             </div>
           </div>
@@ -503,10 +501,10 @@
       <div class="container">
         <div class="section-head">
           <div>
-            <span class="eyebrow">§ 05 — Photo Gallery</span>
-            <h2 class="display-l" style="margin-top: 18px;">A campus,<br />captured.</h2>
+            <span class="eyebrow" data-i18n="idx.gal.eyebrow">§ 05 — Photo Gallery</span>
+            <h2 class="display-l" style="margin-top: 18px;" data-i18n-html="idx.gal.h2">A campus,<br />captured.</h2>
           </div>
-          <p>Real photos coming soon — for now, a quick illustrated tour of what you'll see when you arrive.</p>
+          <p data-i18n="idx.gal.p">Real photos coming soon — for now, a quick illustrated tour of what you'll see when you arrive.</p>
         </div>
 
         <div class="gallery">
@@ -515,49 +513,49 @@
               <img src="https://nupp.edu.ua/uploads/files/0/main/images/panorama-nupp.jpg" alt="NUPP Main Building"
                 style="width:100%;height:100%;object-fit:cover;">
             </div>
-            <div class="gal-label">01 — Main Building, Poltava</div>
+            <div class="gal-label" data-i18n="idx.gal1">01 — Main Building, Poltava</div>
           </div>
           <div class="gal-tile span-4 is-yellow is-tall">
             <div class="gal-art">
               <img src="https://nupp.edu.ua/uploads/files/0/news/2023/11/03/modern%20library/IMG_5461.jpg"
                 alt="NUPP Library" style="width:100%;height:100%;object-fit:cover;">
             </div>
-            <div class="gal-label">02 — Library & Research</div>
+            <div class="gal-label" data-i18n="idx.gal2">02 — Library & Research</div>
           </div>
           <div class="gal-tile span-4 is-cream">
             <div class="gal-art">
               <img src="https://nupp.edu.ua/uploads/files/0/02-.jpg" alt="NUPP Culture"
                 style="width:100%;height:100%;object-fit:cover;">
             </div>
-            <div class="gal-label">03 — Culture & creativity</div>
+            <div class="gal-label" data-i18n="idx.gal3">03 — Culture & creativity</div>
           </div>
           <div class="gal-tile span-4">
             <div class="gal-art">
               <img src="https://nupp.edu.ua/uploads/files/0/03-.jpg" alt="NUPP Campus"
                 style="width:100%;height:100%;object-fit:cover;">
             </div>
-            <div class="gal-label">04 — Campus grounds</div>
+            <div class="gal-label" data-i18n="idx.gal4">04 — Campus grounds</div>
           </div>
           <div class="gal-tile span-4 is-yellow">
             <div class="gal-art">
               <img src="https://nupp.edu.ua/uploads/files/0/04-.jpg" alt="NUPP Events"
                 style="width:100%;height:100%;object-fit:cover;">
             </div>
-            <div class="gal-label">05 — Student events</div>
+            <div class="gal-label" data-i18n="idx.gal5">05 — Student events</div>
           </div>
           <div class="gal-tile span-6">
             <div class="gal-art">
               <img src="https://nupp.edu.ua/uploads/files/0/main/page/sport/images-zvit-2018/new/image6.webp"
                 alt="NUPP Sports Complex" style="width:100%;height:100%;object-fit:cover;">
             </div>
-            <div class="gal-label">06 — Sports Complex</div>
+            <div class="gal-label" data-i18n="idx.gal6">06 — Sports Complex</div>
           </div>
           <div class="gal-tile span-6 is-cream">
             <div class="gal-art">
               <img src="https://i.ytimg.com/vi/yw86OkuiLlw/maxresdefault.jpg" alt="NUPP Student Housing"
                 style="width:100%;height:100%;object-fit:cover;">
             </div>
-            <div class="gal-label">07 — Student Housing</div>
+            <div class="gal-label" data-i18n="idx.gal7">07 — Student Housing</div>
           </div>
         </div>
       </div>
@@ -568,44 +566,44 @@
       <div class="container">
         <div class="section-head">
           <div>
-            <span class="eyebrow">§ 06 — Newcomers' FAQ</span>
-            <h2 class="display-l" style="margin-top: 18px;">Questions you<br />haven't asked yet.</h2>
+            <span class="eyebrow" data-i18n="idx.faq.eyebrow">§ 06 — Newcomers' FAQ</span>
+            <h2 class="display-l" style="margin-top: 18px;" data-i18n-html="idx.faq.h2">Questions you<br />haven't asked yet.</h2>
           </div>
-          <p>The honest answers — from a cohort of upperclassmen who remember exactly how confusing week one was.</p>
+          <p data-i18n="idx.faq.p">The honest answers — from a cohort of upperclassmen who remember exactly how confusing week one was.</p>
         </div>
 
         <div class="faq-list">
           <details class="faq-item" open>
-            <summary class="faq-q">Where do I actually live in first year?<span class="faq-icon">+</span></summary>
-            <div class="faq-a">First-years get priority placement in dorms 3, 4, and 5 (closest to the main building).
+            <summary class="faq-q"><span data-i18n="idx.faq1.q">Where do I actually live in first year?</span><span class="faq-icon">+</span></summary>
+            <div class="faq-a" data-i18n="idx.faq1.a">First-years get priority placement in dorms 3, 4, and 5 (closest to the main building).
               Rooms are typically 2-3 person, kitchen and showers shared by floor. Bring a lamp, slippers, and a tea
               kettle — the rest sorts itself out by week two.</div>
           </details>
           <details class="faq-item">
-            <summary class="faq-q">Is everything taught in Ukrainian?<span class="faq-icon">+</span></summary>
-            <div class="faq-a">Mostly yes. Several master's tracks (IT, Civil Engineering, Architecture) run in English.
+            <summary class="faq-q"><span data-i18n="idx.faq2.q">Is everything taught in Ukrainian?</span><span class="faq-icon">+</span></summary>
+            <div class="faq-a" data-i18n="idx.faq2.a">Mostly yes. Several master's tracks (IT, Civil Engineering, Architecture) run in English.
               International students also get free Ukrainian language classes for the first two semesters.</div>
           </details>
           <details class="faq-item">
-            <summary class="faq-q">What's the food situation?<span class="faq-icon">+</span></summary>
-            <div class="faq-a">Three cafeterias on campus, plus a couple of student-run coffee corners. Lunch averages
+            <summary class="faq-q"><span data-i18n="idx.faq3.q">What's the food situation?</span><span class="faq-icon">+</span></summary>
+            <div class="faq-a" data-i18n="idx.faq3.a">Three cafeterias on campus, plus a couple of student-run coffee corners. Lunch averages
               80-120 UAH. Pro tip: the Block 02 cafeteria does a borscht on Wednesdays that has its own fan club.</div>
           </details>
           <details class="faq-item">
-            <summary class="faq-q">How do I join a club?<span class="faq-icon">+</span></summary>
-            <div class="faq-a">There's a Club Day in the second week of September — every society sets up a stand
+            <summary class="faq-q"><span data-i18n="idx.faq4.q">How do I join a club?</span><span class="faq-icon">+</span></summary>
+            <div class="faq-a" data-i18n="idx.faq4.a">There's a Club Day in the second week of September — every society sets up a stand
               outside the Main Building. Just turn up, sign your name, eat whatever they're offering. You can also DM
               most clubs directly through their Telegram channels.</div>
           </details>
           <details class="faq-item">
-            <summary class="faq-q">Can I work part-time while studying?<span class="faq-icon">+</span></summary>
-            <div class="faq-a">Yes — and most students do, especially from the second year. The Career Centre helps
+            <summary class="faq-q"><span data-i18n="idx.faq5.q">Can I work part-time while studying?</span><span class="faq-icon">+</span></summary>
+            <div class="faq-a" data-i18n="idx.faq5.a">Yes — and most students do, especially from the second year. The Career Centre helps
               match students to local internships and remote roles. Many IT-faculty students freelance from week one.
             </div>
           </details>
           <details class="faq-item">
-            <summary class="faq-q">Where do students go on weekends?<span class="faq-icon">+</span></summary>
-            <div class="faq-a">Round Square (Kruhla Ploshcha), the Vorskla embankment, the corpus park, the gallery
+            <summary class="faq-q"><span data-i18n="idx.faq6.q">Where do students go on weekends?</span><span class="faq-icon">+</span></summary>
+            <div class="faq-a" data-i18n="idx.faq6.a">Round Square (Kruhla Ploshcha), the Vorskla embankment, the corpus park, the gallery
               district, and — when nostalgia kicks in mid-semester — straight back to the dorm kitchen for a 1 a.m. tea
               council.</div>
           </details>
@@ -619,17 +617,16 @@
         <div class="cta-strip">
           <div class="cta-deco" aria-hidden="true"></div>
           <div>
-            <span class="eyebrow" style="display:block; margin-bottom: 18px;">Applications · 2026 intake</span>
-            <h2 class="display-l">Become a NUPP student.<br />It's actually pretty easy.</h2>
-            <p style="margin-top: 22px; max-width: 640px; color: var(--ink);">Submit your documents through the official
+            <span class="eyebrow" style="display:block; margin-bottom: 18px;" data-i18n="idx.cta.eyebrow">Applications · 2026 intake</span>
+            <h2 class="display-l" data-i18n-html="idx.cta.h2">Become a NUPP student.<br />It's actually pretty easy.</h2>
+            <p style="margin-top: 22px; max-width: 640px; color: var(--ink);" data-i18n="idx.cta.p">Submit your documents through the official
               portal. Our admissions team replies within 48 hours, in English or Ukrainian. We'll also help with dorm
               placement, visas, and scholarship applications.</p>
           </div>
           <div style="display: flex; flex-direction: column; gap: 14px;">
-            <a class="btn-flip is-large" href="#"><span class="flip-inner"><span class="flip-front">Start application
-                  ↗</span><span class="flip-back">Start application ↗</span></span></a>
+            <a class="btn-flip is-large" href="#"><span class="flip-inner"><span class="flip-front" data-i18n="idx.cta.btn1">Start application ↗</span><span class="flip-back" data-i18n="idx.cta.btn1">Start application ↗</span></span></a>
             <a class="btn-flip is-ghost is-large" href="campus-life.html"><span class="flip-inner"><span
-                  class="flip-front">Tour campus first</span><span class="flip-back">Tour campus first
+                  class="flip-front" data-i18n="idx.cta.btn2">Tour campus first</span><span class="flip-back" data-i18n="idx.cta.btn2b">Tour campus first
                   ↗</span></span></a>
           </div>
         </div>
@@ -645,31 +642,31 @@
               <img src="assets/nupp-logo.webp" alt="" />
               <div class="wordmark">NUPP</div>
             </div>
-            <p class="foot-blurb">National University «Yuri Kondratyuk Poltava Polytechnic» — engineering, architecture,
+            <p class="foot-blurb" data-i18n="foot.blurb">National University «Yuri Kondratyuk Poltava Polytechnic» — engineering, architecture,
               IT, and 200+ years of curious students. Poltava, Ukraine.</p>
           </div>
           <div>
-            <h4>Explore</h4>
+            <h4 data-i18n="foot.explore">Explore</h4>
             <ul>
-              <li><a href="#spots">Campus spots</a></li>
-              <li><a href="#clubs">Clubs &amp; societies</a></li>
-              <li><a href="#events">Events</a></li>
-              <li><a href="campus-life.html">Campus life</a></li>
-              <li><a href="#faq">Newcomers' FAQ</a></li>
+              <li><a href="#spots" data-i18n="foot.l.spots">Campus spots</a></li>
+              <li><a href="#clubs" data-i18n="foot.l.clubs">Clubs &amp; societies</a></li>
+              <li><a href="#events" data-i18n="foot.l.events">Events</a></li>
+              <li><a href="campus-life.html" data-i18n="foot.l.cl">Campus life</a></li>
+              <li><a href="#faq" data-i18n="foot.l.faq">Newcomers' FAQ</a></li>
             </ul>
           </div>
           <div>
-            <h4>Apply</h4>
+            <h4 data-i18n="foot.apply">Apply</h4>
             <ul>
-              <li><a href="#">Bachelor's programmes</a></li>
-              <li><a href="#">Master's programmes</a></li>
-              <li><a href="#">International students</a></li>
-              <li><a href="#">Scholarships</a></li>
-              <li><a href="#">Dorm placement</a></li>
+              <li><a href="#" data-i18n="foot.l.bach">Bachelor's programmes</a></li>
+              <li><a href="#" data-i18n="foot.l.master">Master's programmes</a></li>
+              <li><a href="#" data-i18n="foot.l.intl">International students</a></li>
+              <li><a href="#" data-i18n="foot.l.schol">Scholarships</a></li>
+              <li><a href="#" data-i18n="foot.l.dorm">Dorm placement</a></li>
             </ul>
           </div>
           <div>
-            <h4>Visit</h4>
+            <h4 data-i18n="foot.visit">Visit</h4>
             <ul>
               <li>Pershotravneva Ave., 24</li>
               <li>Poltava, 36011</li>
@@ -682,12 +679,14 @@
 
         <div class="foot-mark" aria-hidden="true">NUPP · 1818 — 2026</div>
         <div class="foot-meta">
-          <span>© 2026 NUPP Student Life</span>
-          <span>Poltava Polytechnic · 200+ years curious</span>
+          <span data-i18n="foot.meta1">© 2026 NUPP Student Life</span>
+          <span data-i18n="foot.meta2">Poltava Polytechnic · 200+ years curious</span>
         </div>
       </div>
     </footer>
   </div>
+
+  <script src="js/i18n.js"></script>
 
   <!-- ============ Animated grid background JS ============ -->
   <script>
